@@ -1,6 +1,6 @@
-# Name:
-# Student ID:
-# Email:
+# Name: Asher Sawatzky
+# Student ID:51820132
+# Email: arsawatz@umich.edu
 # Who or what you worked with on this homework (including generative AI like ChatGPT):
 # If you worked with generative AI also add a statement for how you used it.
 # e.g.:
@@ -32,10 +32,11 @@ class CouponDispenser:
         Args:
             coupon_cards (list[str]): list of possible coupons users can receive.
         """
+        self.coupon_cards = []
         # TODO: Implement per instructions
         pass
 
-    def __str__(self):
+    def __str__(self, coupon_cards):
         """
         Return a single string with all coupons in coupon_cards joined by pipes ('|').
         If coupon_cards is empty, return an empty string "".
@@ -43,6 +44,10 @@ class CouponDispenser:
         Returns:
             str
         """
+        if coupon_cards == []:
+            return ""
+        else:
+            return str(coupon_cards.join('|'))
         # TODO: Implement per instructions
         pass
 
