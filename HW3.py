@@ -32,7 +32,9 @@ class CouponDispenser:
         Args:
             coupon_cards (list[str]): list of possible coupons users can receive.
         """
-        self.coupon_cards = []
+        self.coupon_cards = coupon_cards
+        self.customer_roster = []
+        self.issued_indices = []
         # TODO: Implement per instructions
         pass
 
@@ -65,6 +67,14 @@ class CouponDispenser:
         Returns:
             str: message as described above
         """
+        if self.coupon_cards == []:
+            return "the box is empty"
+        else:
+            for customer in self.customer_roster:
+                i = self.customer_roster.index(customer)
+            for coupon in self.coupon_cards:
+                if self.coupon_cards.index(coupon) == i:
+                    return coupon
         # TODO: Implement per instructions
         pass
 
@@ -404,5 +414,5 @@ def test():
 
 if __name__ == "__main__":
     main()
-    # test()
+    test()
 
